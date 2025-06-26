@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-background">
+    <div class="overlay">
+      <div class="bubble-container">
+        <a href="index.html" class="bubble">Home</a>
+        <a href="education.html" class="bubble">Education</a>
+        <a href="projects.html" class="bubble">Projects</a>
+        <a href="certifications.html" class="bubble">Certifications</a>
+        <a href="contact.html" class="bubble">Contact</a>
+      </div>
+
+      <h2 style="text-align:center; margin-bottom: 40px;">Projects</h2>
+
+      <div class="tile-grid">
+        <!-- Project 1 -->
+        <div class="tile project-tile">
+          <img src="./photos/BRAIN_page-0001.jpg" alt="Brain Tumor Project" class="project-img">
+          <h3 onclick="toggleDetails(this)">Brain Tumor Segmentation using U-Net</h3>
+          <div class="project-details">
+            <p>Deep learning based MRI image segmentation using U-Net. Built with TensorFlow, OpenCV and Flask.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="tile project-tile">
+          <img src="./photos/Major.png" alt="Fault Detection Project" class="project-img">
+          <h3 onclick="toggleDetails(this)">Fault Detection in Microgrid</h3>
+          <div class="project-details">
+            <p>Signal waveform analysis using Lissajous curves in Python. Won Best Paper Award at national IEEE Conference.</p>
+            <a href="./photos/THESIS.pdf" target="_blank">📄 View Thesis PDF</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="tile project-tile">
+          <img src="./photos/Ai based screener.png" alt="AI Resume Screener" class="project-img">
+          <h3 onclick="toggleDetails(this)">AI-Based Resume Screener</h3>
+          <div class="project-details">
+            <p>NLP-powered Streamlit application that ranks resumes using cosine similarity.</p>
+            <a href="http://192.168.100.27:8501" target="_blank">🔗 Live Screener App</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Gubbala Manikanta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDetails(element) {
+      const details = element.nextElementSibling;
+      details.style.display = (details.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

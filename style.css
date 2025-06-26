@@ -1,0 +1,542 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-background {
+  background: url("./photos/pawel-czerwinski-1A_dO4TFKgM-unsplash.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.full-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bubble-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.bubble:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  border: 3px solid #888;
+}
+
+.resume-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.download-btn {
+  padding: 12px 30px;
+  background-color: #8e2de2;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+  background-color: #a946f7;
+}
+
+/* Social icons */
+.social-links {
+  margin-top: 20px;
+}
+
+.icon {
+  width: 28px;
+  margin: 0 10px;
+  filter: invert(100%);
+  vertical-align: middle;
+}
+
+/* Tile layout */
+.tile-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+
+.tile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 48%;
+}
+
+.skill-column {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-tile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px 25px;
+  color: #eee;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+}
+
+.skills-tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  font-size: 13px;
+  color: #eee;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+.contact-section {
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #8e2de2;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a946f7;
+}
+
+/* Location Tile */
+.location-tile {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px 25px;
+  color: #eee;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 14px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #bbb;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tile-grid {
+    flex-direction: column;
+  }
+
+  .tile-column,
+  .skill-column {
+    flex: 1 1 100%;
+  }
+
+  .skills-tile {
+    flex: unset;
+  }
+}
+
+.project-details {
+  display: none;
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.project-tile h3 {
+  margin-bottom: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-details a {
+  color: #8ecae6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project-details a:hover {
+  color: #a6d8ff;
+}
+
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-details {
+  display: none;
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.project-tile h3 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-details a {
+  color: #8ecae6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project-details a:hover {
+  color: #a6d8ff;
+}
+
+.project-details a {
+  color: #8ecae6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.project-details a:hover {
+  color: #a6d8ff;
+}
+
+.used-tech {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.used-tech li {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tech tags */
+.used-tech {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.used-tech li {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Row inside projects */
+.button-row {
+  margin-top: 12px;
+}
+
+/* Reuse the .download-btn already in your CSS */
+.download-btn {
+  padding: 10px 24px;
+  background-color: #8e2de2;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 13px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #a946f7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-background {
+  background: url("./photos/pawel-czerwinski-1A_dO4TFKgM-unsplash.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.bubble-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.bubble:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.id-card {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  max-width: 700px;
+  margin: 40px auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.passport-photo {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #888;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.contact-info a {
+  color: #8ecae6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #a6d8ff;
+}
+
+.contact-info strong {
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #bbb;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .id-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .passport-photo {
+    width: 100px;
+    height: auto;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .bubble-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bubble {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 13px;
+  }
+
+  .bubble {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .overlay {
+    padding: 20px 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}

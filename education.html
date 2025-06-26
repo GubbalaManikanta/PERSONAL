@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .education-table {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .education-table th,
+    .education-table td {
+      padding: 14px 12px;
+      text-align: center;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .education-table th {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .education-table td {
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .education-table th, .education-table td {
+        font-size: 13px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-background">
+    <div class="overlay">
+      <!-- Bubble Nav -->
+      <div class="bubble-container">
+        <a href="index.html" class="bubble">Home</a>
+        <a href="education.html" class="bubble">Education</a>
+        <a href="projects.html" class="bubble">Projects</a>
+        <a href="certifications.html" class="bubble">Certifications</a>
+        <a href="contact.html" class="bubble">Contact</a>
+      </div>
+
+      <h2>Education</h2>
+
+      <table class="education-table">
+        <thead>
+          <tr>
+            <th>EDUCATION</th>
+            <th>COLLEGE / UNIVERSITY</th>
+            <th>CGPA</th>
+            <th>START YEAR</th>
+            <th>END YEAR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.Tech in EEE</td>
+            <td>NIT Andhra Pradesh</td>
+            <td>7.17</td>
+            <td>2020</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Intermediate (MPC)</td>
+            <td>Sri Chaitanya Junior College</td>
+            <td>5.86</td>
+            <td>2018</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>10th Class</td>
+            <td>Sri Chaitanya School</td>
+            <td>9.5</td>
+            <td>2017</td>
+            <td>2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Gubbala Manikanta. All rights reserved.</p>
+  </footer>
+</body>
+</html>

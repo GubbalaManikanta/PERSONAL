@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+
+    .cert-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      color: #eee;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .cert-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .cert-card h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .cert-card h4 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-background">
+    <div class="overlay">
+      
+      <!-- Bubble Navigation -->
+      <div class="bubble-container">
+        <a href="index.html" class="bubble">Home</a>
+        <a href="education.html" class="bubble">Education</a>
+        <a href="projects.html" class="bubble">Projects</a>
+        <a href="certifications.html" class="bubble">Certifications</a>
+        <a href="contact.html" class="bubble">Contact</a>
+      </div>
+
+      <h2>Certifications</h2>
+
+      <!-- Certification Grid -->
+      <div class="certification-grid">
+
+        <div class="cert-card">
+          <img src="./photos/Data Base Management System (1).jpeg.jpg
+          " alt="DBMS NPTEL Certificate">
+          <h4>DBMS – NPTEL (IIT Kharagpur)</h4>
+        </div>
+
+        <div class="cert-card">
+          <img src="./photos/JOY OF COMPUTING.png" alt="Joy of Computing Certificate">
+          <h4>Joy of Computing using Python – NPTEL</h4>
+        </div>
+
+        <div class="cert-card">
+          <img src="./photos/CN_page-0001.jpg" alt="Coding Ninjas Python Certificate">
+          <h4>Introduction to Python – Coding Ninjas</h4>
+        </div>
+
+        <div class="cert-card">
+          <img src="./photos/UDEMY PY.png" alt="Python Udemy Certificate">
+          <h4>Basic Python Programming – Udemy</h4>
+        </div>
+
+        <div class="cert-card">
+          <img src="./photos/UDEMY C++.png" alt="C/C++ Udemy Certificate">
+          <h4>Introduction to C/C++ – Udemy</h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Gubbala Manikanta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Trigger fade-in animation after DOM loads
+    window.addEventListener("load", () => {
+      document.querySelectorAll('.cert-card').forEach((el, i) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+        }, 100 * i);
+      });
+    });
+  </script>
+</body>
+</html>
